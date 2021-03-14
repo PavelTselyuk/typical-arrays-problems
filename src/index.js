@@ -1,10 +1,16 @@
 
 exports.min = function min (array) {
-  return array && array.length > 0  ?  Math.min(...array) :  0;
+  let minElem = 0;
+  for( let i = 0; i < array.length; i++ ){
+    minElem = array[i] < minElem ? array[i] : minElem;
+  return minElem;
 }
 
 exports.max = function max (array) {
-  return array && array.length > 0 ? Math.max(...array) : 0;
+  let maxElem = 0;
+  for( let i = 0; i < array.length; i++ ){
+    maxElem = array[i] > maxElem ? array[i] : maxElem;
+  return maxElem;
 }
 
 exports.avg = function avg (array) {
